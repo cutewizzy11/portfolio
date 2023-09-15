@@ -294,47 +294,57 @@ footer {
   margin: 2rem 0 0;
 }
 
-/* Add a CSS rule to hide the mobile navigation by default */
+/* Mobile navigation dropdown menu styles */
 .mobile-nav {
   display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 2;
 }
 
-/* Style the mobile navigation menu */
-.mobile-navigation {
+.mobile-menu {
   list-style-type: none;
-  padding: 1rem;
-  background-color: var(--bg-color);
+  padding: 0;
+  margin: 0;
 }
 
-.mobile-navigation li {
-  margin-bottom: 1rem;
+.mobile-menu li {
+  padding: 10px;
   text-align: center;
 }
 
-.mobile-navigation a {
-  color: var(--primary-color);
-  font-size: 1.2rem;
+.mobile-menu a {
   text-decoration: none;
-  transition: var(--transition);
+  color: var(--primary-color);
+  display: block;
+  transition: color 0.3s;
 }
 
-.mobile-navigation a:hover {
+.mobile-menu a:hover {
   color: var(--secondary-color);
 }
 
-/* Use a media query to show the mobile navigation on small screens */
+/* Show mobile navigation when the button is clicked */
+.mobile-nav.active {
+  display: block;
+}
+
+/* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
-  .mobile-nav {
-      display: block;
-  }
-  
-  /* Hide the main navigation on small screens */
   nav ul {
       display: none;
   }
-  
-  /* Show the mobile menu button */
+
   .pure-menu {
       display: block;
+  }
+
+  /* Hide the mobile navigation dropdown by default */
+  .mobile-nav {
+      display: none;
   }
 }
