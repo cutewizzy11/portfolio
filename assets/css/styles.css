@@ -338,8 +338,8 @@ footer {
       z-index: 2;
   }
 
-  /* Show mobile navigation when the button is clicked */
-  .navigation.active {
+  /* Show mobile navigation when hovering over the toggle */
+  .mobile-menu-toggle:hover + .navigation {
       display: flex;
   }
 
