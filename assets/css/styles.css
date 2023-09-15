@@ -293,3 +293,48 @@ footer {
   text-align: center;
   margin: 2rem 0 0;
 }
+
+/* Add a CSS rule to hide the mobile navigation by default */
+.mobile-nav {
+  display: none;
+}
+
+/* Style the mobile navigation menu */
+.mobile-navigation {
+  list-style-type: none;
+  padding: 1rem;
+  background-color: var(--bg-color);
+}
+
+.mobile-navigation li {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.mobile-navigation a {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.mobile-navigation a:hover {
+  color: var(--secondary-color);
+}
+
+/* Use a media query to show the mobile navigation on small screens */
+@media (max-width: 768px) {
+  .mobile-nav {
+      display: block;
+  }
+  
+  /* Hide the main navigation on small screens */
+  nav ul {
+      display: none;
+  }
+  
+  /* Show the mobile menu button */
+  .pure-menu {
+      display: block;
+  }
+}
