@@ -294,89 +294,39 @@ footer {
   margin: 2rem 0 0;
 }
 
-/* Mobile navigation toggle button styles */
-.mobile-menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: var(--primary-color);
-  cursor: pointer;
-}
-
-/* Navigation links */
-.navigation {
-  list-style-type: none;
-  display: flex;
-  gap: 1.9rem;
-  align-items: center;
-}
-
-.navigation li {
-  font-weight: var(--bold-font);
-}
-
-/* Media query for screens smaller than 768px */
-@media (max-width: 768px) {
-  .navigation {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      background-color: var(--bg-color);
-      position: absolute;
-      top: 4rem;
-      left: 0;
-      right: 0;
-      z-index: 1;
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  }
-
-  .mobile-menu-toggle {
-      display: block;
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      z-index: 2;
-  }
-
-  /* Show mobile navigation when hovering over the toggle */
-  .mobile-menu-toggle:hover + .navigation {
-      display: flex;
-  }
-
-  /* Style the mobile menu links */
-  .navigation li {
-      margin-bottom: 1rem;
-  }
-}
 /* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
   nav {
-    padding: 1rem; /* Reduce padding for smaller screens */
+    padding: 1rem 1.5rem; /* Adjust padding for smaller screens */
   }
 
   .hero {
     flex-direction: column; /* Stack items vertically */
     text-align: center;
     gap: 1.5rem;
+    padding: 2rem 1rem; /* Add padding */
   }
 
   .hero img {
     width: 100%; /* Make hero image responsive */
     height: auto;
+    border-radius: 8px; /* Rounded corners for image */
   }
 
   .bio {
     width: 100%;
-    margin-top: 1.5rem; /* Adjust spacing */
-    padding: 1rem;
+    padding: 1rem; /* Add padding */
+    text-align: left; /* Align text left */
   }
 
   .more-about {
-    padding: 1rem; /* Adjust padding */
+    padding: 2rem 1rem; /* Add padding */
+    text-align: justify; /* Justify text */
   }
 
   .skills {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    padding: 2rem 1rem; /* Add padding */
   }
 
   .skills-wrapper {
@@ -386,27 +336,40 @@ footer {
   }
 
   .icon {
-    width: 8rem; /* Resize skill icons */
+    width: 6rem; /* Resize skill icons */
     height: auto;
+    margin: 1rem; /* Add margin */
   }
 
   .projects {
-    padding: 1rem; /* Adjust padding */
+    padding: 2rem 1rem; /* Add padding */
+    text-align: center;
   }
 
   .project-container {
     width: 100%;
     padding: 1rem;
-    margin-bottom: 1rem; /* Adjust spacing */
+    margin-bottom: 1.5rem; /* Add margin */
+    text-align: left; /* Align text left */
   }
 
   .project-pic {
     width: 100%; /* Make project images responsive */
     height: auto;
+    border-radius: 8px; /* Rounded corners for images */
   }
 
   .contact-form-container {
     max-width: 100%; /* Full width on small screens */
+    padding: 1rem; /* Add padding */
+    text-align: left; /* Align text left */
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0; /* Add margin */
+    font-size: 1rem;
   }
 
   .socials {
@@ -419,8 +382,9 @@ footer {
   }
 
   footer {
-    margin-top: 1rem; /* Adjust spacing */
-    padding: 0.75rem;
+    margin-top: 2rem; /* Add margin */
+    padding: 1rem;
+    text-align: center;
   }
 
   /* Show mobile navigation when hovering over the toggle */
@@ -440,6 +404,7 @@ footer {
     background-color: var(--bg-color);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     display: none;
+    padding: 1rem; /* Add padding */
   }
 
   .navigation li {
